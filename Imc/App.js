@@ -4,6 +4,7 @@ import { useState } from 'react';
 import CampoTitulo from './Componentes/CampoTitulo';
 import CampoTexto from './Componentes/CampoTexto';
 import ComponenteBotao from './Componentes/ComponenteBotao';
+import ComponenteLista from './Componentes/ComponenteLista';
 
 export default function App() {
   const [altura, setAltura] = useState(0.0)
@@ -52,8 +53,8 @@ export default function App() {
       <Text>{mensagem2}</Text>
 
     </View>
-  );
 
+  );
 
 }
 
