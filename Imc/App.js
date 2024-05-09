@@ -12,8 +12,8 @@ export default function App() {
   const [listaMensagens, setListaMensagens] = useState([])
 
   function calculaImc() {
-    setListaMensagens( oldArray => [...oldArray, "Altura: " + altura + " Peso: " + peso + " Imc: " + parseInt(peso / (altura * altura))] )
-   
+    setListaMensagens(oldArray => [...oldArray, "Altura: " + altura + " Peso: " + peso + " Imc: " + parseInt(peso / (altura * altura))])
+
   }
   return (
     <View style={styles.container}>
@@ -38,7 +38,7 @@ export default function App() {
       ></CampoTexto>
 
       <ComponenteBotao
-      
+
         largura={90}
         funcao={calculaImc}
       ></ComponenteBotao>
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 2,
     backgroundColor: '#D2E6B5',
-   paddingTop:70,
+    paddingTop: 70,
     alignItems: 'center',
     justifyContent: 'center'
   }
