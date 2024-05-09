@@ -19,7 +19,7 @@ export default function App() {
     <View style={styles.container}>
       <CampoTitulo
         titulo="IMC"
-        cor='#465'
+        cor='#7A8C5F'
         tamanhoFonte={50}
       ></CampoTitulo>
 
@@ -38,7 +38,8 @@ export default function App() {
       ></CampoTexto>
 
       <ComponenteBotao
-        largura={80}
+      
+        largura={90}
         funcao={calculaImc}
       ></ComponenteBotao>
 
@@ -51,7 +52,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 2,
-    backgroundColor: '#B5EBC4',
+    backgroundColor: '#D2E6B5',
    paddingTop:70,
     alignItems: 'center',
     justifyContent: 'center'
