@@ -11,10 +11,18 @@ export default function App() {
   const [mensagem, setMensagemAlt] = useState("")
   const [peso, setPeso] = useState(0.0)
   const [mensagem2, setMensagemPes] = useState("")
+  const [msgCalculo, setMsgCalculo] = useState("")
+  const [listaMensagens, setListaMensagens] = useState([])
 
   function mostrarMensagemAlturaPeso() {
     setMensagemAlt("Altura: " + altura)
     setMensagemPes("Peso: " + peso)
+  }
+
+  function calculaImc() {
+    setListaMensagens( oldArray => [...oldArray, "Altura: " + altura + ",Peso: " + peso + ", Imc: " + (peso / (altura * altura)) ] )
+    console.log({listaMensagens});
+    // setMsgCalculo("Altura: " + altura + " Peso: " + peso + " Imc: " + (peso / (altura * altura)))
   }
   return (
     <View style={styles.container}>
@@ -22,7 +30,6 @@ export default function App() {
         titulo="IMC"
         cor='#465'
         tamanhoFonte={50}
-        style={styles.container}
       ></CampoTitulo>
 
       <CampoTexto
@@ -31,7 +38,7 @@ export default function App() {
         tipoTeclado='numeric'
         funcao={setAltura}
       ></CampoTexto>
-      
+
       <CampoTexto
         titulo="Peso"
         sugestao="Ex: 75.3"
@@ -41,23 +48,22 @@ export default function App() {
 
       <ComponenteBotao
         largura={80}
-        funcao={mostrarMensagemAlturaPeso}
+        funcao={calculaImc}
       ></ComponenteBotao>
-      <Text>{mensagem}</Text>
-      <Text>{mensagem2}</Text>
 
       <ComponenteLista
-      
+        itens={listaMensagens}
       ></ComponenteLista>
     </View>
   );
 }
 const styles = StyleSheet.create({
-    container: {
-      flex: 2,
-      backgroundColor: '#fff3 t',
-      alignItems: 'center',
-      justifyContent: 'center'
-    }
+  container: {
+    flex: 2,
+    marginTop: 50,
+    backgroundColor: '#fff3 t',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 
 });

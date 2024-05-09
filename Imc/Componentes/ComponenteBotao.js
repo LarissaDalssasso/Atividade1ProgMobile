@@ -9,7 +9,7 @@ export default function ComponenteBotao(props) {
                 color="#045"
                 title="Calcular"
                 tamanhoFonte={50}
-                onPress={props.funcao()}
+                onPress={props.funcao}
             />
         </View>
     )
