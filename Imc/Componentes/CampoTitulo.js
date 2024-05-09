@@ -1,4 +1,4 @@
-// questão 1:
+// questão 1
 import React from "react";
 import { Text } from 'react-native';
 

@@ -7,24 +7,22 @@ import ComponenteBotao from './Componentes/ComponenteBotao';
 
 export default function App() {
   const [altura, setAltura] = useState(0.0)
-  const [mensagem, setMensagem] = useState("")
-  function mostrarMensagemAltura() {
-    setMensagem("Altura: " + altura)
-  }
-
+  const [mensagem, setMensagemAlt] = useState("")
   const [peso, setPeso] = useState(0.0)
-  const [mensagem2, setMensagem2] = useState("")
-  function mostrarMensagemPeso() {
-    setMensagem2("Peso: " + peso)
+  const [mensagem2, setMensagemPes] = useState("")
+
+  function mostrarMensagemAlturaPeso() {
+    setMensagemAlt("Altura: " + altura)
+    setMensagemPes("Peso: " + peso)
   }
   return (
-    <View>
-      {<CampoTitulo
+    <View style={styles.container}>
+      <CampoTitulo
         titulo="IMC"
         cor='#465'
         tamanhoFonte={50}
         style={styles.container}
-      ></CampoTitulo>}
+      ></CampoTitulo>
 
       <CampoTexto
         titulo="Altura"
@@ -32,21 +30,19 @@ export default function App() {
         tipoTeclado='numeric'
         funcao={setAltura}
       ></CampoTexto>
-      <ComponenteBotao
-        largura={3}
-        funcao={mostrarMensagemAltura}
-      ></ComponenteBotao>
-      <Text>{mensagem}</Text>
+      
       <CampoTexto
         titulo="Peso"
         sugestao="Ex: 75.3"
         tipoTeclado='numeric'
         funcao={setPeso}
       ></CampoTexto>
+
       <ComponenteBotao
-        largura={3}
-        funcao={mostrarMensagemPeso}
+        largura={80}
+        funcao={mostrarMensagemAlturaPeso}
       ></ComponenteBotao>
+      <Text>{mensagem}</Text>
       <Text>{mensagem2}</Text>
 
     </View>
@@ -55,12 +51,12 @@ export default function App() {
 
 }
 
-
-
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    TextAlign: 'center'
-  },
+    container: {
+      flex: 2,
+      backgroundColor: '#fff3 t',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
 
 });
