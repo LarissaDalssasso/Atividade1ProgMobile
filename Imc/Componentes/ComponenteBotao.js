@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from 'react-native';
 
-export default function Botao(props) {
+export default function ComponenteBotao(props) {
     return (
         
         <View style={styles.container}>
@@ -12,7 +12,7 @@ export default function Botao(props) {
             { color: props.cor }
       
         ]}>{props.titulo}</Button>
-        </View>
+        </View> 
 
     )
 }

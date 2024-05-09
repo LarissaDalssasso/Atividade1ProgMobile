@@ -1,16 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import { useState } from 'react';
 import CampoTitulo from './Componentes/CampoTitulo';
 import CampoTexto from './Componentes/CampoTexto';
-import Botao from './Componentes/ComponenteBotao';
+import ComponenteBotao from './Componentes/ComponenteBotao';
 
 export default function App() {
   const [altura, setAltura] = useState(0.0)
   const [mensagem2, setMensagem2] = useState("")
   function mostrarMensagemAltura() {
     setMensagem("Altura: " + altura)
-  }
+  } 
 
   const [peso, setPeso] = useState(0.0)
   const [mensagem, setMensagem] = useState("")
@@ -46,11 +46,12 @@ export default function App() {
 
 
 }
-<Botao
+<Button
   largura={3}
   tamanhoFonte={50}
   cor='#465'
-></Botao>
+  onPress={mostrarMensagemAltura}
+/>
 
 
 const styles = StyleSheet.create({
