@@ -32,11 +32,10 @@ export default function App() {
         tipoTeclado='numeric'
         funcao={setAltura}
       ></CampoTexto>
-      <Button
+      <ComponenteBotao
         largura={3}
-        tamanhoFonte={50}
-        cor='#465'
-        onPress={mostrarMensagemAltura} />
+        funcao={mostrarMensagemAltura}
+      ></ComponenteBotao>
       <Text>{mensagem}</Text>
       <CampoTexto
         titulo="Peso"
@@ -44,11 +43,10 @@ export default function App() {
         tipoTeclado='numeric'
         funcao={setPeso}
       ></CampoTexto>
-      <Button
+      <ComponenteBotao
         largura={3}
-        tamanhoFonte={50}
-        cor='#465'
-        onPress={mostrarMensagemPeso} />
+        funcao={mostrarMensagemPeso}
+      ></ComponenteBotao>
       <Text>{mensagem2}</Text>
 
     </View>
