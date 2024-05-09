@@ -20,7 +20,7 @@ export default function App() {
   return (
     <View>
       {<CampoTitulo
-        titulo="Informação"
+        titulo="IMC"
         cor='#465'
         tamanhoFonte={50}
         style={styles.container}
