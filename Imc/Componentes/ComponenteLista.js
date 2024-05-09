@@ -1,6 +1,6 @@
 //questão 4
 import React from "react";
-import { StyleSheet, TextInput, View, Text } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 
 export default function ComponenteLista(props) {
@@ -16,8 +16,6 @@ export default function ComponenteLista(props) {
         </View>
     );
 }
-
-
 
 const styles = StyleSheet.create({
     container: {

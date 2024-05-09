@@ -46,12 +46,12 @@ export default function App() {
       <Text>{mensagem}</Text>
       <Text>{mensagem2}</Text>
 
+      <ComponenteLista
+      
+      ></ComponenteLista>
     </View>
-
   );
-
 }
-
 const styles = StyleSheet.create({
     container: {
       flex: 2,
