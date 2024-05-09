@@ -8,21 +8,12 @@ import ComponenteLista from './Componentes/ComponenteLista';
 
 export default function App() {
   const [altura, setAltura] = useState(0.0)
-  const [mensagem, setMensagemAlt] = useState("")
   const [peso, setPeso] = useState(0.0)
-  const [mensagem2, setMensagemPes] = useState("")
-  const [msgCalculo, setMsgCalculo] = useState("")
   const [listaMensagens, setListaMensagens] = useState([])
 
-  function mostrarMensagemAlturaPeso() {
-    setMensagemAlt("Altura: " + altura)
-    setMensagemPes("Peso: " + peso)
-  }
-
   function calculaImc() {
-    setListaMensagens( oldArray => [...oldArray, "Altura: " + altura + ",Peso: " + peso + ", Imc: " + (peso / (altura * altura)) ] )
-    console.log({listaMensagens});
-    // setMsgCalculo("Altura: " + altura + " Peso: " + peso + " Imc: " + (peso / (altura * altura)))
+    setListaMensagens( oldArray => [...oldArray, "Altura: " + altura + " Peso: " + peso + " Imc: " + parseInt(peso / (altura * altura))] )
+   
   }
   return (
     <View style={styles.container}>
@@ -60,8 +51,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 2,
-    marginTop: 50,
-    backgroundColor: '#fff3 t',
+    backgroundColor: '#B5EBC4',
+   paddingTop:70,
     alignItems: 'center',
     justifyContent: 'center'
   }

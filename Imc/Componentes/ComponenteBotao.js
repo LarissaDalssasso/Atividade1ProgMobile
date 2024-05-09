@@ -1,10 +1,13 @@
 //questão 3
 import React from "react";
-import {  View, Button } from 'react-native';
+import { View, Button } from 'react-native';
 
 export default function ComponenteBotao(props) {
     return (
-        <View style={[{ width: props.largura }]}>
+        <View style={[
+            { width: props.largura },
+            { marginTop: 20}
+        ]}>
             <Button
                 color="#045"
                 title="Calcular"
