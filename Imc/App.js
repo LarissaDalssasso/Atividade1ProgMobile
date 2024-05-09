@@ -7,15 +7,15 @@ import ComponenteBotao from './Componentes/ComponenteBotao';
 
 export default function App() {
   const [altura, setAltura] = useState(0.0)
-  const [mensagem2, setMensagem2] = useState("")
+  const [mensagem, setMensagem] = useState("")
   function mostrarMensagemAltura() {
     setMensagem("Altura: " + altura)
-  } 
+  }
 
   const [peso, setPeso] = useState(0.0)
-  const [mensagem, setMensagem] = useState("")
+  const [mensagem2, setMensagem2] = useState("")
   function mostrarMensagemPeso() {
-    setMensagem("Peso: " + peso)
+    setMensagem2("Peso: " + peso)
   }
   return (
     <View>
@@ -32,26 +32,31 @@ export default function App() {
         tipoTeclado='numeric'
         funcao={setAltura}
       ></CampoTexto>
-
+      <Button
+        largura={3}
+        tamanhoFonte={50}
+        cor='#465'
+        onPress={mostrarMensagemAltura} />
+      <Text>{mensagem}</Text>
       <CampoTexto
         titulo="Peso"
         sugestao="Ex: 75.3"
         tipoTeclado='numeric'
         funcao={setPeso}
       ></CampoTexto>
-
+      <Button
+        largura={3}
+        tamanhoFonte={50}
+        cor='#465'
+        onPress={mostrarMensagemPeso} />
+      <Text>{mensagem2}</Text>
 
     </View>
   );
 
 
 }
-<Button
-  largura={3}
-  tamanhoFonte={50}
-  cor='#465'
-  onPress={mostrarMensagemAltura}
-/>
+
 
 
 const styles = StyleSheet.create({
